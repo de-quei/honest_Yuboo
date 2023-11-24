@@ -87,6 +87,47 @@ main {
     margin-top: 5px;
 }
 
+/* 탭 */
+.tab {
+    position: relative;
+    text-align: center;
+    line-height: 35px;
+}
+
+.tab ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tab li {
+    width: 140px; 
+    background-color: #222;
+    opacity: 0.7;
+    color: #fff;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.tab li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.tab li:hover{
+    background-color: #777;
+}
+
+.tab span {
+    font-size: 10px;
+}
+
+
 /*footer*/
 footer{
     background-color: #222;
