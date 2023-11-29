@@ -136,6 +136,33 @@ main {
 footer{
     background-color: #222;
     color: #777;
-    padding-top: 20px;
-    padding-bottom: 20px;
+}
+
+.footer-menu{
+    padding: 20px 0 20px 40px;
+}
+
+.footer-menu h1{
+    font-size: 12px;
+}
+
+.footer-menu p{
+    font-size: 10px;
+}
+
+.fmenu1{
+    margin-top: 5px;
+}
+
+.fmenu2{
+    margin: 20px 0 20px 0;
+}
+
+.fmenu3{
+    margin-top: 20px;
+}
+
+.footer-menu ul{
+    list-style: none;
+    font-size: 10px;
 }
