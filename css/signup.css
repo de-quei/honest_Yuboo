@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+main h1{
+    text-align: center;
+}
+
+.container{
+    width: 270px;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3px;
+    border: solid 1px #c8c8c8;
+    box-shadow: 0 3px 3px 0#d1d1d1;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+
+input {
+    padding: 8px;
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
