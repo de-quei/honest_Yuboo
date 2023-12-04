@@ -149,11 +149,18 @@ main {
     background-color: #faf8f4;
     padding: 60px 40px 10px 40px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .item{
     background-color: #fff;
-    margin-bottom: 20px; 
+    padding: 40px 0 50px;
+    margin: 0 20px 50px; 
+}
+
+.item p{
+    margin-top: 10px;
 }
 
 /*footer*/
