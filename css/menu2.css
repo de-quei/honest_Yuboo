@@ -112,6 +112,15 @@ main {
     margin: 0px 2px 0px 2px;
 }
 
+.tab li:nth-child(2){
+    background-color: #fff;
+    opacity: 1;
+}
+
+.tab li:nth-child(2) span{
+    color: #222;
+}
+
 .tab li a {
     cursor: pointer;
     text-decoration: none;
