@@ -146,14 +146,14 @@ main {
 }
 
 .menu-list{
-    display: flex;
     background-color: #faf8f4;
-    padding: 80px 40px 10px 40px;
+    padding: 60px 40px 10px 40px;
+    display: flex;
 }
 
 .item{
-    width: 100%;
     background-color: #fff;
+    margin-bottom: 20px; 
 }
 
 /*footer*/
