@@ -5,12 +5,25 @@
     $tableNum = $_POST["tableNum"];
     $reserveDateTime = $_POST["reserveDateTime"];
 
-    $sql = "INSERT INTO reservation (tableNum, reserveInfo, branch) VALUES ('$tableNum', '$reserveDateTime', '$branch')";
+    // 체크할 쿼리
+    $checkQuery = "SELECT * FROM reservation WHERE tableNum = '$tableNum' AND reserveInfo = '$reserveDateTime'";
+    $checkResult = mysqli_query($conn, $checkQuery);
 
-    if (mysqli_query($conn, $sql)) {
-        echo "예약 완료!";
+    // 이미 예약이 있는 경우
+    if (mysqli_num_rows($checkResult) > 0) {
+        echo "<script>alert('이미 예약되어 있습니다. 다른 시간과 테이블을 선택해주십시오.')</script>";
+        echo "<script>location.replace('reservation.html');</script>";
     } else {
-        echo "예약 실패. 오류: " . mysqli_error($conn);
+        // 예약이 없는 경우
+        $sql = "INSERT INTO reservation (tableNum, reserveInfo, branch) VALUES ('$tableNum', '$reserveDateTime', '$branch')";
+
+        if (mysqli_query($conn, $sql)) {
+            // 예약 성공 시
+            echo "예약 완료!";
+        } else {
+            // 예약 실패 시
+            echo "예약 실패. 오류: " . mysqli_error($conn);
+        }
     }
 
     mysqli_close($conn);
