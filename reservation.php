@@ -6,12 +6,13 @@
     $reserveDateTime = $_POST["reserveDateTime"];
 
     // 체크할 쿼리
-    $checkQuery = "SELECT * FROM reservation WHERE tableNum = '$tableNum' AND reserveInfo = '$reserveDateTime'";
+    $checkQuery = "SELECT * FROM reservation WHERE tableNum = '$tableNum' 
+                   AND reserveInfo = '$reserveDateTime'";
     $checkResult = mysqli_query($conn, $checkQuery);
 
     // 이미 예약이 있는 경우
     if (mysqli_num_rows($checkResult) > 0) {
-        echo "<script>alert('이미 예약되어 있습니다. 다른 시간과 테이블을 선택해주십시오.')</script>";
+        echo "<script>alert('Choose another one.')</script>";
         echo "<script>location.replace('reservation.html');</script>";
     } else {
         // 예약이 없는 경우
