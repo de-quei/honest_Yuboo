@@ -16,7 +16,7 @@
 
     if($row != null){
         $_SESSION['userid'] = $row['id'];
-        echo "<script>alert('안녕하세요, $userid($name) 님')</script>";
+        echo "<script>alert('안녕하세요, $userid 님')</script>";
         echo "<script>location.replace('menu.html');</script>";
         exit;
     }
